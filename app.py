@@ -23,7 +23,7 @@ st.markdown("""
 <style>
 
 .stApp {
-    background-color: #fbfaf8;
+    background: #fbfaf8;
 }
 
 .block-container {
@@ -35,25 +35,23 @@ st.markdown("""
 }
 
 
-/* ------------------------------------------------------------
-   Typography
-   ------------------------------------------------------------ */
+/* Main typography */
 
 h1, h2, h3, h4 {
-    color: #292c2f !important;
+    color: #303236 !important;
 }
 
 h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.55rem !important;
     font-weight: 700 !important;
     letter-spacing: -0.035em !important;
-    line-height: 1.1 !important;
-    margin-bottom: 0.45rem !important;
+    margin-bottom: 0.4rem !important;
 }
 
 h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.55rem !important;
     font-weight: 680 !important;
+    letter-spacing: -0.02em !important;
 }
 
 h3 {
@@ -61,43 +59,39 @@ h3 {
     font-weight: 650 !important;
 }
 
-p {
-    color: #303336 !important;
-    line-height: 1.68 !important;
+p, li {
+    color: #303236 !important;
+    line-height: 1.65 !important;
 }
 
 
-/* ------------------------------------------------------------
-   Section labels
-   ------------------------------------------------------------ */
+/* Small section labels */
 
 .section-label {
-    color: #55595d;
+    color: #66696c;
     font-size: 0.67rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin-top: 2.55rem;
-    margin-bottom: 0.5rem;
+    margin-top: 2.6rem;
+    margin-bottom: 0.45rem;
 }
 
 
-/* ------------------------------------------------------------
-   Research question
-   ------------------------------------------------------------ */
+/* Research question */
 
 .question-box {
-    border: 1px solid #d8d6d2;
-    border-left: 3px solid #55595d;
+    border: 1px solid #d7d5d1;
+    border-left: 4px solid #55585b;
+    background: #f3f2ef;
     border-radius: 4px;
-    padding: 1.15rem 1.35rem;
-    margin: 1rem 0 1.4rem 0;
-    background: #f5f4f1;
+    padding: 1.15rem 1.3rem;
+    margin: 1rem 0 1.2rem 0;
 }
 
 .question-label {
-    color: #55595d;
-    font-size: 0.67rem;
+    color: #66696c;
+    font-size: 0.66rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -105,230 +99,126 @@ p {
 }
 
 .question-text {
-    color: #292c2f;
-    font-size: 1.18rem;
+    color: #292b2e;
+    font-size: 1.12rem;
     font-weight: 650;
     line-height: 1.5;
 }
 
 
-/* ------------------------------------------------------------
-   Model working cards
-   ------------------------------------------------------------ */
+/* Prediction tool */
 
-.model-card {
-    border: 1px solid #dedcd8;
-    border-radius: 4px;
+.tool-box {
+    border: 1px solid #c9c7c2;
+    border-radius: 6px;
     background: #ffffff;
-    padding: 1.1rem 1.2rem;
-    min-height: 125px;
-}
-
-.model-number {
-    color: #6a6e72;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.35rem;
-}
-
-.model-title {
-    color: #292c2f;
-    font-size: 0.92rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
-}
-
-.model-text {
-    color: #303336;
-    font-size: 0.81rem;
-    line-height: 1.58;
-}
-
-
-/* ------------------------------------------------------------
-   Main prediction tool
-   ------------------------------------------------------------ */
-
-.tool-container {
-    border: 1px solid #cfc from;
-    border: 1px solid #ceccc7;
-    border-radius: 5px;
-    background: #ffffff;
-    padding: 1.45rem 1.5rem 1.2rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
     margin-top: 0.8rem;
-    margin-bottom: 1rem;
 }
 
-.tool-title {
-    color: #292c2f;
-    font-size: 1.15rem;
+.tool-heading {
+    color: #292b2e;
+    font-size: 1.35rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
 
 .tool-description {
-    color: #303336;
-    font-size: 0.84rem;
+    color: #303236;
+    font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
 
-/* ------------------------------------------------------------
-   Result card
-   ------------------------------------------------------------ */
+/* Button */
 
-.result-card {
-    border: 1px solid #d5d3cf;
-    border-left: 3px solid #55595d;
+.stButton > button {
+    width: 100%;
+    height: 3rem;
+    background-color: #45494d;
+    color: white;
+    border: 1px solid #45494d;
     border-radius: 4px;
-    background: #f5f4f1;
-    padding: 1.3rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.stButton > button:hover {
+    background-color: #34383c;
+    border-color: #34383c;
+    color: white;
+}
+
+
+/* Result */
+
+.result-box {
+    border: 1px solid #d2d0cc;
+    border-left: 4px solid #55585b;
+    border-radius: 5px;
+    background: #f3f2ef;
+    padding: 1.3rem;
+}
+
+.result-number {
+    color: #292b2e;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
 }
 
 .result-label {
-    color: #5f6367;
+    color: #66696c;
     font-size: 0.66rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
-.result-number {
-    color: #292c2f;
-    font-size: 2.85rem;
-    font-weight: 700;
-    margin: 0.25rem 0;
-}
 
-.result-text {
-    color: #303336;
-    font-size: 0.81rem;
-    line-height: 1.58;
+/* Native Streamlit containers */
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border-color: #d7d5d1 !important;
+    border-radius: 5px !important;
 }
 
 
-/* ------------------------------------------------------------
-   General cards
-   ------------------------------------------------------------ */
+/* Metric styling */
 
-.info-card {
-    border: 1px solid #dedcd8;
-    border-radius: 4px;
-    background: #ffffff;
-    padding: 1.1rem 1.2rem;
-    min-height: 125px;
+[data-testid="stMetricLabel"] {
+    color: #55585b !important;
+    font-weight: 650 !important;
 }
 
-.info-title {
-    color: #292c2f;
-    font-size: 0.91rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
-}
-
-.info-text {
-    color: #303336;
-    font-size: 0.81rem;
-    line-height: 1.6;
+[data-testid="stMetricValue"] {
+    color: #292b2e !important;
 }
 
 
-/* ------------------------------------------------------------
-   Performance cards
-   ------------------------------------------------------------ */
-
-.performance-card {
-    border: 1px solid #dedcd8;
-    border-radius: 4px;
-    background: #ffffff;
-    padding: 1.15rem 1.25rem;
-}
-
-.performance-title {
-    color: #303336;
-    font-size: 0.82rem;
-    font-weight: 700;
-}
-
-.performance-number {
-    color: #292c2f;
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin: 0.25rem 0;
-}
-
-.performance-text {
-    color: #303336;
-    font-size: 0.78rem;
-    line-height: 1.55;
-}
-
-
-/* ------------------------------------------------------------
-   Interpretation cards
-   ------------------------------------------------------------ */
-
-.interpretation-card {
-    border: 1px solid #dedcd8;
-    border-radius: 4px;
-    background: #ffffff;
-    padding: 1.2rem 1.25rem;
-    min-height: 145px;
-}
-
-.interpretation-title {
-    color: #292c2f;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-}
-
-.interpretation-text {
-    color: #303336;
-    font-size: 0.81rem;
-    line-height: 1.62;
-}
-
-
-/* ------------------------------------------------------------
-   Inputs
-   ------------------------------------------------------------ */
+/* Inputs */
 
 label {
-    color: #292c2f !important;
+    color: #303236 !important;
     font-weight: 600 !important;
 }
 
 
-/* ------------------------------------------------------------
-   Button
-   ------------------------------------------------------------ */
+/* Dataframe */
 
-.stButton > button {
-    background-color: #44484c;
-    color: #ffffff;
-    border: 1px solid #44484c;
-    border-radius: 4px;
-    font-weight: 650;
-    min-height: 2.8rem;
-}
-
-.stButton > button:hover {
-    background-color: #363a3e;
-    border-color: #363a3e;
+[data-testid="stDataFrame"] {
+    border: 1px solid #d7d5d1;
 }
 
 
-/* ------------------------------------------------------------
-   Footer
-   ------------------------------------------------------------ */
+/* Footer */
 
 .footer {
     text-align: center;
     color: #777a7d;
     font-size: 0.72rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 </style>
@@ -336,7 +226,7 @@ label {
 
 
 # ============================================================
-# LOAD TRAINED MODEL
+# LOAD MODEL
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -358,7 +248,7 @@ preprocessor, model = load_models()
 
 
 # ============================================================
-# TITLE
+# HERO
 # ============================================================
 
 st.markdown(
@@ -400,9 +290,9 @@ st.markdown(
 )
 
 st.write(
-    "The project investigates whether measurable socioeconomic "
-    "conditions in the preceding year can provide useful predictive "
-    "information about subsequent conflict outcomes."
+    "The project examines whether measurable socioeconomic conditions "
+    "in the preceding year contain useful predictive information about "
+    "subsequent conflict outcomes."
 )
 
 
@@ -415,64 +305,43 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.header("How the model turns data into a prediction")
+st.header("From socioeconomic data to prediction")
 
 st.write(
-    "The model uses six previous-year socioeconomic indicators and "
-    "a Random Forest classifier to identify patterns associated with "
+    "The model uses six previous-year socioeconomic indicators and a "
+    "Random Forest classifier to identify patterns associated with "
     "historical organized state-based conflict."
 )
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown(
-        """
-        <div class="model-card">
-            <div class="model-number">01</div>
-            <div class="model-title">Previous-year indicators</div>
-            <div class="model-text">
-                GDP per capita, GDP growth, inflation, population,
-                unemployment and military expenditure.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Previous-year indicators**")
+        st.write(
+            "GDP per capita, GDP growth, inflation, population, "
+            "unemployment and military expenditure."
+        )
 
 with c2:
-    st.markdown(
-        """
-        <div class="model-card">
-            <div class="model-number">02</div>
-            <div class="model-title">Random Forest</div>
-            <div class="model-text">
-                The trained classifier identifies patterns across
-                historical country-year observations.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Random Forest classifier**")
+        st.write(
+            "A trained machine-learning model identifies patterns "
+            "across historical country-year observations."
+        )
 
 with c3:
-    st.markdown(
-        """
-        <div class="model-card">
-            <div class="model-number">03</div>
-            <div class="model-title">Prediction</div>
-            <div class="model-text">
-                The model produces a probability and a corresponding
-                conflict classification for the supplied profile.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Model output**")
+        st.write(
+            "The model produces a probability and a corresponding "
+            "conflict classification."
+        )
 
 
 # ============================================================
-# MAIN MODEL TOOL
+# INTERACTIVE MODEL
 # ============================================================
 
 st.markdown(
@@ -480,103 +349,100 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <div class="tool-container">
-        <div class="tool-title">
-            Try the Model
-        </div>
-        <div class="tool-description">
-            Enter a hypothetical country's previous-year socioeconomic
-            conditions to generate a model-based prediction.
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+with st.container(border=True):
 
-
-st.markdown("#### Economic conditions")
-
-c1, c2, c3 = st.columns(3)
-
-with c1:
-    gdp_per_capita = st.number_input(
-        "GDP per capita (US$)",
-        min_value=0.0,
-        max_value=150000.0,
-        value=3000.0,
-        step=100.0
+    st.markdown(
+        '<div class="tool-heading">Try the Model</div>',
+        unsafe_allow_html=True
     )
 
-with c2:
-    gdp_growth = st.number_input(
-        "GDP growth (%)",
-        min_value=-50.0,
+    st.markdown(
+        '<div class="tool-description">'
+        'Enter a hypothetical country profile using previous-year '
+        'socioeconomic conditions.'
+        '</div>',
+        unsafe_allow_html=True
+    )
+
+    st.markdown("#### Economic conditions")
+
+    c1, c2, c3 = st.columns(3)
+
+    with c1:
+        gdp_per_capita = st.number_input(
+            "GDP per capita (US$)",
+            min_value=0.0,
+            max_value=150000.0,
+            value=3000.0,
+            step=100.0
+        )
+
+    with c2:
+        gdp_growth = st.number_input(
+            "GDP growth (%)",
+            min_value=-50.0,
+            max_value=50.0,
+            value=3.0,
+            step=0.1
+        )
+
+    with c3:
+        inflation = st.number_input(
+            "Inflation (%)",
+            min_value=0.0,
+            max_value=500.0,
+            value=5.0,
+            step=0.1
+        )
+
+    st.markdown("#### Demographic and labour conditions")
+
+    c1, c2 = st.columns(2)
+
+    with c1:
+        population = st.number_input(
+            "Population",
+            min_value=0.0,
+            max_value=2000000000.0,
+            value=10000000.0,
+            step=100000.0
+        )
+
+    with c2:
+        unemployment = st.number_input(
+            "Unemployment (%)",
+            min_value=0.0,
+            max_value=100.0,
+            value=6.0,
+            step=0.1
+        )
+
+    st.markdown("#### Security conditions")
+
+    military_expenditure = st.number_input(
+        "Military expenditure (% of GDP)",
+        min_value=0.0,
         max_value=50.0,
-        value=3.0,
+        value=2.0,
         step=0.1
     )
 
-with c3:
-    inflation = st.number_input(
-        "Inflation (%)",
-        min_value=0.0,
-        max_value=500.0,
-        value=5.0,
-        step=0.1
+    st.caption(
+        "Use hypothetical values to explore how the trained model "
+        "responds to different socioeconomic profiles."
     )
 
+    st.write("")
 
-st.markdown("#### Demographic and labour conditions")
-
-c1, c2 = st.columns(2)
-
-with c1:
-    population = st.number_input(
-        "Population",
-        min_value=0.0,
-        max_value=2000000000.0,
-        value=10000000.0,
-        step=100000.0
+    assess = st.button(
+        "Generate Prediction",
+        type="primary",
+        use_container_width=True
     )
-
-with c2:
-    unemployment = st.number_input(
-        "Unemployment (%)",
-        min_value=0.0,
-        max_value=100.0,
-        value=6.0,
-        step=0.1
-    )
-
-
-st.markdown("#### Security conditions")
-
-military_expenditure = st.number_input(
-    "Military expenditure (% of GDP)",
-    min_value=0.0,
-    max_value=50.0,
-    value=2.0,
-    step=0.1
-)
-
-
-st.write("")
-
-st.caption(
-    "This tool explores hypothetical scenarios. It is not a real-time "
-    "assessment of any country's current conflict risk."
-)
-
-assess = st.button(
-    "Generate Prediction",
-    use_container_width=True
-)
 
 
 # ============================================================
-# MODEL RESULT
+# MODEL OUTPUT
 # ============================================================
 
 if assess:
@@ -600,47 +466,42 @@ if assess:
         unsafe_allow_html=True
     )
 
-    c1, c2 = st.columns([1, 1.5])
+    c1, c2 = st.columns([1, 1.6])
 
     with c1:
 
         st.markdown(
-            f"""
-            <div class="result-card">
-
-                <div class="result-label">
-                    Estimated probability
-                </div>
-
-                <div class="result-number">
-                    {probability * 100:.1f}%
-                </div>
-
-                <div class="result-text">
-                    Probability assigned by the trained Random Forest
-                    to the positive conflict class.
-                </div>
-
-            </div>
-            """,
+            '<div class="result-box">',
             unsafe_allow_html=True
         )
+
+        st.markdown(
+            '<div class="result-label">Estimated probability</div>',
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            f'<div class="result-number">{probability * 100:.1f}%</div>',
+            unsafe_allow_html=True
+        )
+
+        st.write(
+            "Probability assigned by the trained Random Forest "
+            "to the positive conflict class."
+        )
+
+        st.markdown("</div>", unsafe_allow_html=True)
 
     with c2:
 
         if prediction == 1:
-
             st.subheader("Positive conflict classification")
-
             st.write(
                 "Under the supplied hypothetical conditions, the model "
                 "assigns the scenario to the positive conflict class."
             )
-
         else:
-
             st.subheader("Negative conflict classification")
-
             st.write(
                 "Under the supplied hypothetical conditions, the model "
                 "assigns the scenario to the negative conflict class."
@@ -660,51 +521,32 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.header("Data used in the analysis")
+st.header("Data foundation")
 
 st.write(
     "The project combines organized state-based conflict observations "
-    "with country-level socioeconomic indicators. The socioeconomic "
-    "variables were obtained from World Bank data and integrated with "
+    "with country-level socioeconomic indicators. World Bank data "
+    "provide the socioeconomic predictors, which were integrated with "
     "conflict observations at the country-year level."
 )
 
 c1, c2 = st.columns(2)
 
 with c1:
-
-    st.markdown(
-        """
-        <div class="info-card">
-            <div class="info-title">
-                Organized state-based conflict data
-            </div>
-            <div class="info-text">
-                Historical conflict observations provide the outcome
-                used by the classification model.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Organized state-based conflict data**")
+        st.write(
+            "Historical conflict observations provide the outcome "
+            "used for classification."
+        )
 
 with c2:
-
-    st.markdown(
-        """
-        <div class="info-card">
-            <div class="info-title">
-                World Bank socioeconomic data
-            </div>
-            <div class="info-text">
-                Country-level economic, demographic, labour and
-                security indicators provide the model's predictors.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
+    with st.container(border=True):
+        st.markdown("**World Bank socioeconomic data**")
+        st.write(
+            "Country-level economic, demographic, labour and security "
+            "indicators provide the model's predictors."
+        )
 
 st.markdown("#### Predictors")
 
@@ -756,56 +598,30 @@ st.header("Model performance")
 c1, c2 = st.columns(2)
 
 with c1:
-
-    st.markdown(
-        """
-        <div class="performance-card">
-
-            <div class="performance-title">
-                Lagged Model Accuracy
-            </div>
-
-            <div class="performance-number">
-                92.49%
-            </div>
-
-            <div class="performance-text">
-                Accuracy under the lagged evaluation framework.
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.metric(
+            "Lagged Model Accuracy",
+            "92.49%"
+        )
+        st.write(
+            "Accuracy under the lagged evaluation framework."
+        )
 
 with c2:
-
-    st.markdown(
-        """
-        <div class="performance-card">
-
-            <div class="performance-title">
-                Country-Held-Out Accuracy
-            </div>
-
-            <div class="performance-number">
-                83.12%
-            </div>
-
-            <div class="performance-text">
-                Accuracy when evaluated on countries completely
-                excluded from training.
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.metric(
+            "Country-Held-Out Accuracy",
+            "83.12%"
+        )
+        st.write(
+            "Accuracy when evaluated on countries completely "
+            "excluded from training."
+        )
 
 st.write(
     "The country-held-out evaluation provides an additional test of "
     "generalization because the model is evaluated on countries that "
-    "were not used during training."
+    "were not included during training."
 )
 
 
@@ -821,9 +637,9 @@ st.markdown(
 st.header("Which variables influenced the model most?")
 
 st.write(
-    "Feature importance indicates how strongly the trained Random Forest "
-    "uses each predictor when making its decisions. It describes model "
-    "behaviour rather than proving that a variable causes conflict."
+    "Feature importance shows the relative contribution of each "
+    "predictor to the trained Random Forest's decisions. It does not "
+    "establish that any variable causes conflict."
 )
 
 feature_names = [
@@ -850,11 +666,6 @@ if hasattr(model, "feature_importances_"):
         horizontal=True
     )
 
-    st.caption(
-        "Higher relative importance means the model relied more heavily "
-        "on that feature when constructing its predictions."
-    )
-
 
 # ============================================================
 # INTERPRETATION
@@ -865,51 +676,27 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.header("How should the results be understood?")
+st.header("Understanding the model's output")
 
 c1, c2 = st.columns(2)
 
 with c1:
-
-    st.markdown(
-        """
-        <div class="interpretation-card">
-
-            <div class="interpretation-title">
-                What the model can tell us
-            </div>
-
-            <div class="interpretation-text">
-                It can indicate whether a hypothetical socioeconomic
-                profile resembles patterns associated with historical
-                conflict outcomes in the training data.
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**What the model can indicate**")
+        st.write(
+            "Whether a hypothetical socioeconomic profile resembles "
+            "patterns associated with historical conflict outcomes "
+            "in the training data."
+        )
 
 with c2:
-
-    st.markdown(
-        """
-        <div class="interpretation-card">
-
-            <div class="interpretation-title">
-                What the model cannot tell us
-            </div>
-
-            <div class="interpretation-text">
-                It cannot establish causality or provide a complete
-                explanation of why conflict occurs in a particular
-                country or period.
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**What the model cannot establish**")
+        st.write(
+            "It cannot establish causality or provide a complete "
+            "explanation of why conflict occurs in a particular "
+            "country or period."
+        )
 
 
 # ============================================================
@@ -924,20 +711,20 @@ st.markdown(
 st.header("Important limitations")
 
 st.write(
-    "Organized conflict is shaped by political, historical, geographic, "
+    "Conflict is shaped by political, historical, geographic, "
     "institutional and strategic factors that are not fully represented "
     "by the six variables used in this model."
 )
 
 st.write(
-    "The predictions should therefore be viewed as statistical estimates "
-    "generated from historical patterns, rather than definitive forecasts "
-    "of future conflict."
+    "The predictions should therefore be understood as statistical "
+    "estimates based on historical patterns, rather than definitive "
+    "forecasts of future conflict."
 )
 
 
 # ============================================================
-# ABOUT THE PROJECT
+# PROJECT
 # ============================================================
 
 st.markdown(
@@ -948,63 +735,36 @@ st.markdown(
 st.header("International Relations × Machine Learning")
 
 st.write(
-    "This project demonstrates the application of machine-learning "
-    "methods to an International Relations research question through "
-    "data integration, temporal feature engineering, classification, "
-    "evaluation and interactive deployment."
+    "This project applies machine-learning methods to an International "
+    "Relations research question through data integration, temporal "
+    "feature engineering, classification, evaluation and interactive "
+    "deployment."
 )
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-
-    st.markdown(
-        """
-        <div class="info-card">
-            <div class="info-title">
-                Research focus
-            </div>
-            <div class="info-text">
-                Socioeconomic conditions and organized state-based conflict.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Research focus**")
+        st.write(
+            "Socioeconomic conditions and organized state-based conflict."
+        )
 
 with c2:
-
-    st.markdown(
-        """
-        <div class="info-card">
-            <div class="info-title">
-                Technical approach
-            </div>
-            <div class="info-text">
-                Python, preprocessing, Random Forest classification
-                and model evaluation.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Technical approach**")
+        st.write(
+            "Python, preprocessing, Random Forest classification "
+            "and model evaluation."
+        )
 
 with c3:
-
-    st.markdown(
-        """
-        <div class="info-card">
-            <div class="info-title">
-                Deployment
-            </div>
-            <div class="info-text">
-                An interactive web application for exploring
-                hypothetical scenarios.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.markdown("**Deployment**")
+        st.write(
+            "An interactive web application for exploring "
+            "hypothetical scenarios."
+        )
 
 
 # ============================================================
