@@ -28,11 +28,12 @@ st.markdown("""
 
     /* Limit overall content width */
     .block-container {
-        max-width: 1200px;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-
+    max-width: 1200px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
     /* Typography */
     h1 {
         font-size: 2.7rem !important;
