@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import hashlib
 from pathlib import Path
 
 st.set_page_config(
@@ -11,18 +10,6 @@ st.set_page_config(
 )
 
 base_dir = Path(__file__).resolve().parent
-
-
-# Temporary file verification
-for filename in ["lagged_preprocessor.pkl", "lagged_random_forest.pkl"]:
-    path = base_dir / filename
-
-    with open(path, "rb") as f:
-        data = f.read()
-
-    st.write(filename)
-    st.write("Size:", len(data), "bytes")
-    st.write("SHA256:", hashlib.sha256(data).hexdigest())
 
 
 @st.cache_resource
