@@ -14,16 +14,18 @@ st.set_page_config(
 )
 
 # ============================================================
-# VISUAL STYLE
+# VISUAL DESIGN
 # ============================================================
 
 st.markdown("""
 <style>
 
-    /* Overall page */
+    /* --------------------------------------------------------
+       PAGE
+    -------------------------------------------------------- */
 
     .stApp {
-        background-color: #f8f7f4;
+        background-color: #faf9f7;
     }
 
     .block-container {
@@ -32,112 +34,211 @@ st.markdown("""
         padding-bottom: 4rem;
     }
 
-    /* Main typography */
+    /* --------------------------------------------------------
+       TYPOGRAPHY
+    -------------------------------------------------------- */
 
     h1 {
-        color: #111418 !important;
-        font-size: 3.4rem !important;
-        font-weight: 750 !important;
-        letter-spacing: -0.055em !important;
+        color: #25282b !important;
+        font-size: 3.35rem !important;
+        font-weight: 720 !important;
+        letter-spacing: -0.05em !important;
         line-height: 1.05 !important;
-        margin-bottom: 0.5rem !important;
+        margin-bottom: 0.45rem !important;
     }
 
     h2 {
-        color: #171b20 !important;
-        font-size: 1.85rem !important;
-        font-weight: 700 !important;
+        color: #292d31 !important;
+        font-size: 1.8rem !important;
+        font-weight: 680 !important;
         letter-spacing: -0.025em !important;
     }
 
     h3 {
-        color: #20252a !important;
-        font-weight: 680 !important;
+        color: #303438 !important;
+        font-weight: 650 !important;
     }
 
     p {
-        color: #343a40;
-        line-height: 1.7;
+        color: #25282b !important;
+        line-height: 1.7 !important;
     }
 
-    /* Small section labels */
+    /* --------------------------------------------------------
+       SECTION LABELS
+    -------------------------------------------------------- */
 
     .section-label {
-        color: #29445b;
+        color: #4a5055;
         font-size: 0.68rem;
         font-weight: 750;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         margin-top: 2.8rem;
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.5rem;
     }
 
-    /* Intro text */
+    /* --------------------------------------------------------
+       INTRODUCTION
+    -------------------------------------------------------- */
 
     .intro {
         max-width: 820px;
-        color: #3d444b;
-        font-size: 1.12rem;
+        color: #303438 !important;
+        font-size: 1.1rem;
         line-height: 1.7;
         margin-bottom: 1.3rem;
     }
 
-    /* Quiet explanation box */
+    /* --------------------------------------------------------
+       RESEARCH QUESTION
+    -------------------------------------------------------- */
 
-    .stAlert {
-        border-radius: 5px;
+    .research-question {
+        background: #f1f0ed;
+        border-left: 4px solid #3b4044;
+        padding: 1.25rem 1.45rem;
+        margin: 1rem 0 1.5rem 0;
     }
 
-    /* Buttons */
+    .research-question-title {
+        color: #555b60;
+        font-size: 0.67rem;
+        font-weight: 750;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 0.55rem;
+    }
+
+    .research-question-text {
+        color: #202326;
+        font-size: 1.35rem;
+        font-weight: 650;
+        line-height: 1.45;
+    }
+
+    /* --------------------------------------------------------
+       SIMPLE CARDS
+    -------------------------------------------------------- */
+
+    .info-card {
+        background: #ffffff;
+        border: 1px solid #dededb;
+        border-radius: 5px;
+        padding: 1rem 1.1rem;
+        min-height: 125px;
+    }
+
+    .info-title {
+        color: #25282b;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .info-text {
+        color: #25282b;
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    /* --------------------------------------------------------
+       INPUTS
+    -------------------------------------------------------- */
+
+    label {
+        color: #25282b !important;
+        font-weight: 600 !important;
+    }
+
+    [data-baseweb="input"] {
+        border-radius: 4px;
+    }
+
+    /* --------------------------------------------------------
+       BUTTON
+    -------------------------------------------------------- */
 
     .stButton > button {
-        background-color: #172b3b;
+        background-color: #303438;
         color: white;
-        border: 1px solid #172b3b;
+        border: 1px solid #303438;
         border-radius: 4px;
         font-weight: 650;
-        padding: 0.65rem 1.2rem;
         min-height: 2.8rem;
     }
 
     .stButton > button:hover {
-        background-color: #253f54;
-        border-color: #253f54;
+        background-color: #454a4f;
+        border-color: #454a4f;
         color: white;
     }
 
-    /* Input labels */
+    /* --------------------------------------------------------
+       RESULT
+    -------------------------------------------------------- */
 
-    label {
-        color: #252a2f !important;
-        font-weight: 600 !important;
+    .result-box {
+        background: #f1f0ed;
+        border-left: 4px solid #3b4044;
+        padding: 1.3rem 1.4rem;
+        border-radius: 4px;
     }
 
-    /* Metric styling */
+    .result-label {
+        color: #5d6368;
+        font-size: 0.67rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .result-number {
+        color: #202326;
+        font-size: 3.1rem;
+        font-weight: 720;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        margin: 0.3rem 0 0.5rem 0;
+    }
+
+    .result-description {
+        color: #25282b;
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    /* --------------------------------------------------------
+       METRICS
+    -------------------------------------------------------- */
 
     [data-testid="stMetricValue"] {
-        color: #111418 !important;
-        font-weight: 750 !important;
+        color: #202326 !important;
+        font-weight: 720 !important;
     }
 
     [data-testid="stMetricLabel"] {
-        color: #4d555d !important;
-        font-weight: 600 !important;
+        color: #40464b !important;
+        font-weight: 650 !important;
     }
 
-    /* Dividers */
+    /* --------------------------------------------------------
+       DIVIDERS
+    -------------------------------------------------------- */
 
     hr {
         border: none;
         border-top: 1px solid #d8d7d3;
-        margin: 2.5rem 0;
+        margin: 2.4rem 0;
     }
 
-    /* Footer */
+    /* --------------------------------------------------------
+       FOOTER
+    -------------------------------------------------------- */
 
     .footer-text {
-        color: #777c81;
-        font-size: 0.75rem;
+        color: #777b7f !important;
+        font-size: 0.73rem;
         text-align: center;
     }
 
@@ -180,85 +281,136 @@ st.title("Conflict Risk Prediction")
 
 st.markdown(
     """
-    <p class="intro">
-    Can a country's socioeconomic conditions help us understand
-    its likelihood of experiencing organized state-based conflict?
-    This interactive project uses historical data and machine learning
-    to explore that question.
-    </p>
+    <div class="intro">
+    An interactive research project examining whether socioeconomic
+    conditions from the previous year can provide useful information
+    about organized state-based conflict.
+    </div>
     """,
     unsafe_allow_html=True
 )
 
-st.info(
-    "This is an academic research project. The model identifies "
-    "patterns in historical data; its results should not be treated "
-    "as definitive predictions or explanations of why conflicts occur."
-)
-
 
 # ============================================================
-# THE IDEA
+# RESEARCH QUESTION
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">The idea</p>',
+    '<p class="section-label">Research Question</p>',
     unsafe_allow_html=True
 )
 
-st.header("What does this model actually do?")
+st.markdown(
+    """
+    <div class="research-question">
+
+        <div class="research-question-title">
+            The central question of this project
+        </div>
+
+        <div class="research-question-text">
+            To what extent can previous-year socioeconomic conditions
+            help predict organized state-based conflict?
+        </div>
+
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.write(
     """
-    The model looks at six conditions from the previous year —
-    economic performance, prices, population, employment and
-    military spending — and compares them with patterns found
-    in historical data.
+    The project examines whether measurable socioeconomic conditions
+    observed before a conflict contain predictive information about
+    conflict outcomes in the following period.
+    """
+)
+
+
+# ============================================================
+# HOW IT WORKS
+# ============================================================
+
+st.markdown(
+    '<p class="section-label">The Approach</p>',
+    unsafe_allow_html=True
+)
+
+st.header("How does it work?")
+
+st.write(
+    """
+    The model uses six conditions from the previous year and looks
+    for patterns between those conditions and historical conflict
+    observations.
     """
 )
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.subheader("1. Enter conditions")
-    st.write(
-        "Provide the previous year's socioeconomic information "
-        "for a hypothetical or real country."
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-title">The inputs</div>
+            <div class="info-text">
+                Six socioeconomic and security indicators from
+                the previous year.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 with c2:
-    st.subheader("2. The model compares")
-    st.write(
-        "A Random Forest model looks for patterns it learned "
-        "from the historical dataset."
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-title">The analysis</div>
+            <div class="info-text">
+                A Random Forest model examines patterns learned
+                from historical observations.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 with c3:
-    st.subheader("3. See the estimate")
-    st.write(
-        "The application returns an estimated probability "
-        "for the conflict outcome identified by the model."
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-title">The result</div>
+            <div class="info-text">
+                The model produces an estimated probability for
+                the conflict outcome it was trained to identify.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 
 # ============================================================
-# INPUT SECTION
+# MODEL INPUT
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">Try the model</p>',
+    '<p class="section-label">Explore the Model</p>',
     unsafe_allow_html=True
 )
 
 st.header("Enter previous-year conditions")
 
 st.write(
-    "Enter the country's conditions from the previous year. "
-    "You can experiment with different values to see how the "
-    "model responds."
+    """
+    Enter the socioeconomic conditions for a hypothetical or real
+    country. You can experiment with different profiles and see
+    how the model responds.
+    """
 )
 
-st.markdown("#### Economy")
+st.markdown("#### Economic conditions")
 
 c1, c2, c3 = st.columns(3)
 
@@ -289,6 +441,7 @@ with c3:
         step=0.1
     )
 
+
 st.markdown("#### Population and employment")
 
 c1, c2 = st.columns(2)
@@ -311,7 +464,8 @@ with c2:
         step=0.1
     )
 
-st.markdown("#### Security")
+
+st.markdown("#### Security conditions")
 
 military_expenditure = st.number_input(
     "Military expenditure (% of GDP)",
@@ -349,8 +503,12 @@ if predict:
     prediction = model.predict(processed_data)[0]
     probability = model.predict_proba(processed_data)[0][1]
 
+    # --------------------------------------------------------
+    # RESULT
+    # --------------------------------------------------------
+
     st.markdown(
-        '<p class="section-label">Your result</p>',
+        '<p class="section-label">Your Result</p>',
         unsafe_allow_html=True
     )
 
@@ -360,9 +518,26 @@ if predict:
 
     with r1:
 
-        st.metric(
-            "Estimated probability",
-            f"{probability * 100:.1f}%"
+        st.markdown(
+            f"""
+            <div class="result-box">
+
+                <div class="result-label">
+                    Estimated probability
+                </div>
+
+                <div class="result-number">
+                    {probability * 100:.1f}%
+                </div>
+
+                <div class="result-description">
+                    Model-generated estimate based on the conditions
+                    entered above.
+                </div>
+
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
     with r2:
@@ -372,8 +547,11 @@ if predict:
             st.subheader("The model identifies a higher-risk pattern")
 
             st.write(
-                "Based on the information entered, the model assigns "
-                "this profile to its positive conflict class."
+                """
+                Based on the information provided, the model assigns
+                this profile to the conflict class it was trained to
+                identify.
+                """
             )
 
         else:
@@ -381,32 +559,35 @@ if predict:
             st.subheader("The model identifies a lower-risk pattern")
 
             st.write(
-                "Based on the information entered, the model assigns "
-                "this profile to its negative conflict class."
+                """
+                Based on the information provided, the model assigns
+                this profile to the non-conflict class it was trained
+                to identify.
+                """
             )
 
     st.caption(
-        "The percentage is a model-generated estimate based on "
-        "historical patterns. It is not a forecast of a country's future."
+        "This is a statistical estimate based on historical data. "
+        "It is not a forecast of what will necessarily happen in reality."
     )
 
 
 # ============================================================
-# PERFORMANCE
+# MODEL PERFORMANCE
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">Model performance</p>',
+    '<p class="section-label">Model Performance</p>',
     unsafe_allow_html=True
 )
 
-st.header("How well does it perform?")
+st.header("How well does the model perform?")
 
 st.write(
     """
-    The model was evaluated in two ways. The second test is especially
-    useful because it asks how well the model performs on countries
-    that were not included in its training data.
+    The model was evaluated using two approaches. The second test
+    is particularly useful because it evaluates the model on countries
+    that were completely excluded from training.
     """
 )
 
@@ -436,11 +617,11 @@ with p2:
 
 
 # ============================================================
-# WHAT INFLUENCED THE MODEL
+# MODEL INTERPRETATION
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">Inside the model</p>',
+    '<p class="section-label">Understanding the Model</p>',
     unsafe_allow_html=True
 )
 
@@ -448,9 +629,8 @@ st.header("Which factors mattered most?")
 
 st.write(
     """
-    Machine-learning models can consider several variables at once.
-    The chart below shows which of the six inputs contributed most
-    strongly to the Random Forest's decisions.
+    The chart shows the relative importance of the six indicators
+    within the Random Forest model.
     """
 )
 
@@ -479,13 +659,13 @@ if hasattr(model, "feature_importances_"):
     )
 
     st.caption(
-        "Higher importance means greater contribution to the model's "
-        "predictions. It does not mean the factor causes conflict."
+        "Feature importance shows predictive contribution within "
+        "the model. It does not establish that a factor causes conflict."
     )
 
 
 # ============================================================
-# DATA SOURCES
+# DATA AND SOURCES
 # ============================================================
 
 st.markdown(
@@ -499,12 +679,12 @@ st.write(
     """
     The project combines organized state-based conflict observations
     with country-level socioeconomic indicators. The socioeconomic
-    indicators include data obtained from the World Bank.
+    indicators include data from the World Bank.
     """
 )
 
 source_df = pd.DataFrame({
-    "Information": [
+    "Indicator": [
         "Organized state-based conflict",
         "GDP per capita",
         "GDP growth",
@@ -513,7 +693,7 @@ source_df = pd.DataFrame({
         "Unemployment",
         "Military expenditure"
     ],
-    "Role in the project": [
+    "Role": [
         "Outcome",
         "Economic condition",
         "Economic condition",
@@ -532,11 +712,11 @@ st.dataframe(
 
 
 # ============================================================
-# ABOUT
+# ABOUT THE PROJECT
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">About the project</p>',
+    '<p class="section-label">About the Project</p>',
     unsafe_allow_html=True
 )
 
@@ -544,19 +724,20 @@ st.header("International Relations meets Machine Learning")
 
 st.write(
     """
-    This project was developed to explore how computational methods
-    can be applied to an International Relations question. Historical
-    conflict observations were combined with socioeconomic indicators,
-    previous-year conditions were used as inputs, and a Random Forest
-    classifier was trained to identify patterns in the data.
+    This project explores how computational methods can be applied
+    to an International Relations question. Historical conflict
+    observations were combined with socioeconomic indicators, with
+    previous-year conditions used as inputs to a Random Forest
+    classification model.
     """
 )
 
 st.write(
     """
-    The purpose is not to reduce conflict to economics. Rather, the
-    project asks whether measurable socioeconomic conditions contain
-    information that can contribute to understanding patterns of conflict.
+    The purpose is not to reduce conflict to economic conditions.
+    Instead, the project asks whether measurable socioeconomic
+    circumstances contain information that can contribute to
+    identifying patterns associated with conflict.
     """
 )
 
@@ -566,25 +747,26 @@ st.write(
 # ============================================================
 
 st.markdown(
-    '<p class="section-label">Important context</p>',
+    '<p class="section-label">Important Context</p>',
     unsafe_allow_html=True
 )
 
-st.header("What the result does — and does not — mean")
+st.header("What does the result mean?")
 
 st.write(
     """
-    Conflict is influenced by political institutions, history,
-    geography, leadership, identity, external intervention and many
-    other factors that are not represented by these six variables.
+    Conflict is influenced by many factors, including political
+    institutions, history, geography, leadership, identity,
+    external intervention and strategic decisions. These factors
+    are not fully represented by the six variables used here.
     """
 )
 
 st.write(
     """
-    Therefore, a high or low model estimate should be understood as
-    a statistical result from historical data, not as a definitive
-    statement about a country's future.
+    The model should therefore be understood as an exploration
+    of predictive patterns in historical data — not as a definitive
+    conflict forecasting system.
     """
 )
 
