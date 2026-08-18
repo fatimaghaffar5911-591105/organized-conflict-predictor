@@ -25,6 +25,9 @@ def load_models():
 
     return preprocessor, model
    import hashlib
+from pathlib import Path
+
+base_dir = Path(__file__).resolve().parent
 
 for filename in ["lagged_preprocessor.pkl", "lagged_random_forest.pkl"]:
     path = base_dir / filename
@@ -36,8 +39,7 @@ for filename in ["lagged_preprocessor.pkl", "lagged_random_forest.pkl"]:
     st.write("Size:", len(data), "bytes")
     st.write("SHA256:", hashlib.sha256(data).hexdigest())
 
-
-
+preprocessor, model = load_models()
 preprocessor, model = load_models()
 
 st.title("🌍 Conflict Risk Prediction")
