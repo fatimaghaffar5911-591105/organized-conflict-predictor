@@ -131,23 +131,23 @@ p, li {
 }
 
 
-/* Button */
+/* Generate Prediction button */
 
 .stButton > button {
     width: 100%;
     height: 3rem;
-    background-color: #45494d;
-    color: white;
-    border: 1px solid #45494d;
+    background-color: #242628 !important;
+    color: #ffffff !important;
+    border: 1px solid #242628 !important;
     border-radius: 4px;
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .stButton > button:hover {
-    background-color: #34383c;
-    border-color: #34383c;
-    color: white;
+    background-color: #111315 !important;
+    border-color: #111315 !important;
+    color: #ffffff !important;
 }
 
 
