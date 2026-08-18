@@ -35,7 +35,9 @@ st.markdown("""
 }
 
 
-/* Main typography */
+/* ============================================================
+   MAIN TYPOGRAPHY
+   ============================================================ */
 
 h1, h2, h3, h4 {
     color: #303236 !important;
@@ -65,7 +67,9 @@ p, li {
 }
 
 
-/* Small section labels */
+/* ============================================================
+   SECTION LABELS
+   ============================================================ */
 
 .section-label {
     color: #66696c;
@@ -78,7 +82,9 @@ p, li {
 }
 
 
-/* Research question */
+/* ============================================================
+   RESEARCH QUESTION
+   ============================================================ */
 
 .question-box {
     border: 1px solid #d7d5d1;
@@ -106,15 +112,9 @@ p, li {
 }
 
 
-/* Prediction tool */
-
-.tool-box {
-    border: 1px solid #c9c7c2;
-    border-radius: 6px;
-    background: #ffffff;
-    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
-    margin-top: 0.8rem;
-}
+/* ============================================================
+   PREDICTION TOOL
+   ============================================================ */
 
 .tool-heading {
     color: #292b2e;
@@ -131,27 +131,96 @@ p, li {
 }
 
 
-/* Generate Prediction button */
+/* ============================================================
+   GENERATE PREDICTION BUTTON
+   ============================================================ */
 
-.stButton > button {
-    width: 100%;
-    height: 3rem;
-    background-color: #242628 !important;
+/*
+   Force the button itself and every common nested element
+   to use a black background and pure white typography.
+*/
+
+div.stButton > button {
+    width: 100% !important;
+    height: 3.4rem !important;
+    min-height: 3.4rem !important;
+
+    background: #111111 !important;
+    background-color: #111111 !important;
+
     color: #ffffff !important;
-    border: 1px solid #242628 !important;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-weight: 700 !important;
+
+    border: 1px solid #111111 !important;
+    border-radius: 5px !important;
+
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+
+    opacity: 1 !important;
+    box-shadow: none !important;
 }
 
-.stButton > button:hover {
-    background-color: #111315 !important;
-    border-color: #111315 !important;
+
+/* Force all text inside the button to white */
+
+div.stButton > button *,
+div.stButton > button p,
+div.stButton > button span,
+div.stButton > button div {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+
+/* Hover */
+
+div.stButton > button:hover {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+
+    border-color: #000000 !important;
+}
+
+
+/* Hover text */
+
+div.stButton > button:hover *,
+div.stButton > button:hover p,
+div.stButton > button:hover span,
+div.stButton > button:hover div {
     color: #ffffff !important;
 }
 
 
-/* Result */
+/* Focus */
+
+div.stButton > button:focus,
+div.stButton > button:focus-visible,
+div.stButton > button:active {
+    background: #111111 !important;
+    background-color: #111111 !important;
+    color: #ffffff !important;
+
+    border-color: #111111 !important;
+    box-shadow: none !important;
+}
+
+
+/* Focus text */
+
+div.stButton > button:focus *,
+div.stButton > button:focus-visible *,
+div.stButton > button:active * {
+    color: #ffffff !important;
+}
+
+
+/* ============================================================
+   RESULT
+   ============================================================ */
 
 .result-box {
     border: 1px solid #d2d0cc;
@@ -177,7 +246,9 @@ p, li {
 }
 
 
-/* Native Streamlit containers */
+/* ============================================================
+   NATIVE STREAMLIT CONTAINERS
+   ============================================================ */
 
 [data-testid="stVerticalBlockBorderWrapper"] {
     border-color: #d7d5d1 !important;
@@ -185,7 +256,9 @@ p, li {
 }
 
 
-/* Metric styling */
+/* ============================================================
+   METRICS
+   ============================================================ */
 
 [data-testid="stMetricLabel"] {
     color: #55585b !important;
@@ -197,7 +270,9 @@ p, li {
 }
 
 
-/* Inputs */
+/* ============================================================
+   INPUTS
+   ============================================================ */
 
 label {
     color: #303236 !important;
@@ -205,14 +280,18 @@ label {
 }
 
 
-/* Dataframe */
+/* ============================================================
+   DATAFRAME
+   ============================================================ */
 
 [data-testid="stDataFrame"] {
     border: 1px solid #d7d5d1;
 }
 
 
-/* Footer */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 .footer {
     text-align: center;
@@ -226,7 +305,7 @@ label {
 
 
 # ============================================================
-# LOAD MODEL
+# LOAD TRAINED MODEL
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -436,7 +515,6 @@ with st.container(border=True):
 
     assess = st.button(
         "Generate Prediction",
-        type="primary",
         use_container_width=True
     )
 
