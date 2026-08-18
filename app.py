@@ -8,6 +8,10 @@ st.set_page_config(
     page_icon="🌍",
     layout="centered"
 )
+from pathlib import Path
+
+st.write("APP DIRECTORY:", Path(__file__).resolve().parent)
+st.write("FILES AVAILABLE:", [p.name for p in Path(__file__).resolve().parent.iterdir()])
 
 @st.cache_resource
 def load_models():
