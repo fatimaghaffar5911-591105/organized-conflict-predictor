@@ -24,6 +24,19 @@ def load_models():
         model = pickle.load(f)
 
     return preprocessor, model
+   import hashlib
+
+for filename in ["lagged_preprocessor.pkl", "lagged_random_forest.pkl"]:
+    path = base_dir / filename
+
+    with open(path, "rb") as f:
+        data = f.read()
+
+    st.write(filename)
+    st.write("Size:", len(data), "bytes")
+    st.write("SHA256:", hashlib.sha256(data).hexdigest())
+
+
 
 preprocessor, model = load_models()
 
